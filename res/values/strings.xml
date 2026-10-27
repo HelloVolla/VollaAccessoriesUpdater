@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Volla Accessories</string>
+    <string name="settings_summary">Manage connected accessories</string>
+    <string name="empty_title">No accessories connected</string>
+    <string name="empty_subtitle">Connect a supported accessory to manage it.</string>
+    <string name="section_info">Device</string>
+    <string name="section_settings">Settings</string>
+    <string name="section_firmware">Firmware</string>
+    <string name="section_actions">Actions</string>
+    <string name="action_check">Check for updates</string>
+    <string name="action_install">Install update</string>
+    <string name="action_back">Back</string>
+    <string name="action_pick_file">Install firmware from file…</string>
+    <string name="action_dump">Save a copy of the installed firmware…</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_done">Done</string>
+    <string name="label_module">Connected over %1$s</string>
+    <string name="label_current_version">Current version %1$s</string>
+    <string name="label_up_to_date">Up to date</string>
+    <string name="label_update_available">Update available: %1$s</string>
+    <string name="label_checking">Checking for updates…</string>
+    <string name="label_check_failed">Could not check for updates: %1$s</string>
+    <string name="label_dumping">Reading the firmware back. The accessory restarts twice.</string>
+    <string name="label_rebooting_hint">Waiting for the accessory to reconnect. Do not unplug it.</string>
+    <string name="disconnected_title">Accessory disconnected</string>
+    <string name="disconnected_subtitle">Reconnect it to carry on.</string>
+</resources>

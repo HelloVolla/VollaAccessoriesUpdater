@@ -1,0 +1,62 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_library {
+    name: "VollaAccessoriesUpdater-core",
+    manifest: "core/AndroidManifest.xml",
+    srcs: ["core/src/**/*.kt"],
+    platform_apis: true,
+    kotlincflags: ["-Xjvm-default=all"],
+    static_libs: [
+        "androidx.core_core-ktx",
+        "kotlin-stdlib",
+        "kotlinx-coroutines-android",
+        "kotlinx_coroutines",
+    ],
+}
+
+android_library {
+    name: "VollaAccessoriesUpdater-module-usb",
+    manifest: "modules/usb/AndroidManifest.xml",
+    srcs: ["modules/usb/src/**/*.kt"],
+    platform_apis: true,
+    kotlincflags: ["-Xjvm-default=all"],
+    static_libs: [
+        "VollaAccessoriesUpdater-core",
+        "androidx.core_core-ktx",
+        "kotlin-stdlib",
+        "kotlinx-coroutines-android",
+        "kotlinx_coroutines",
+    ],
+}
+
+android_app {
+    name: "VollaAccessoriesUpdater",
+    manifest: "AndroidManifest.xml",
+    srcs: ["app/src/**/*.kt"],
+    resource_dirs: ["res"],
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    kotlincflags: ["-Xjvm-default=all"],
+    static_libs: [
+        "VollaAccessoriesUpdater-core",
+        "VollaAccessoriesUpdater-module-usb",
+        "androidx.activity_activity-compose",
+        "androidx.compose.foundation_foundation",
+        "androidx.compose.material3_material3",
+        "androidx.compose.material_material-icons-extended",
+        "androidx.compose.runtime_runtime",
+        "androidx.compose.ui_ui",
+        "androidx.compose.ui_ui-tooling-preview",
+        "androidx.core_core-ktx",
+        "androidx.lifecycle_lifecycle-runtime-compose",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
+        "androidx.lifecycle_lifecycle-viewmodel-compose",
+        "kotlin-stdlib",
+        "kotlinx-coroutines-android",
+        "kotlinx_coroutines",
+    ],
+}
